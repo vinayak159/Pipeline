@@ -36,8 +36,9 @@ pipeline {
                  stage('Dev Deployment') {
                  steps {
                        input('Do you want to proceed with Dev deployment?')
-                       bat 'RENAME C:\\Users\\330406\\.jenkins\\workspace\\Pipeline\\target\\Pipeline-1.0.war Pipeline.war'
-                       bat 'copy C:\\Users\\330406\\.jenkins\\workspace\\Pipeline\\target\\Pipeline.war D:\\Software\\apache-tomee-plus-7.0.2\\webapps\\'
+                       //bat 'RENAME C:\\Users\\330406\\.jenkins\\workspace\\Pipeline\\target\\Pipeline-1.0.war Pipeline.war'
+                       //bat 'copy C:\\Users\\330406\\.jenkins\\workspace\\Pipeline\\target\\Pipeline.war D:\\Software\\apache-tomee-plus-7.0.2\\webapps\\'
+                       bat 'D:\\Essentials\\WAS855\\AppServer85\\profiles\\AppSrv01\\bin\\wsadmin -lang jython -f D:\\Vinayak\\Learning\\WAS_Deploy_Script\\installApplication.py'
                        echo "Dev Deployment Successful!!"
                            }
                  }
